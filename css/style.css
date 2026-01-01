@@ -123,6 +123,39 @@ button {
     margin-bottom: var(--space-xl);
 }
 
+/* Section CTA Link */
+.section-cta {
+    text-align: center;
+    margin-top: var(--space-xl);
+}
+
+.section-cta__link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    padding: var(--space-sm) var(--space-lg);
+    border: 2px solid var(--color-accent);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-base);
+}
+
+.section-cta__link:hover {
+    background: var(--color-accent);
+    color: var(--color-white);
+}
+
+.section-cta__link svg {
+    transition: transform var(--transition-base);
+}
+
+.section-cta__link:hover svg {
+    transform: translateX(4px);
+}
+
 .link-arrow {
     display: inline-flex;
     align-items: center;
@@ -4381,60 +4414,47 @@ button {
     }
 }
 
-/* Servizio Overview Card */
+/* Servizio Overview Card - New Layout with Images */
 .servizio-overview-card {
     display: flex;
     flex-direction: column;
     background: var(--color-white);
-    border: 1px solid var(--color-gray-200);
     border-radius: var(--radius-lg);
-    padding: var(--space-xl);
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     transition: all var(--transition-base);
-    position: relative;
 }
 
 .servizio-overview-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-    border-color: var(--color-accent);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
-.servizio-overview-card--featured {
-    border-color: var(--color-accent);
-    border-width: 2px;
-    background: linear-gradient(135deg, rgba(237, 137, 54, 0.03) 0%, var(--color-white) 100%);
+/* Image section */
+.servizio-overview-card__image {
+    position: relative;
+    height: 140px;
+    overflow: hidden;
 }
 
-.servizio-overview-card--summer {
-    background: linear-gradient(135deg, rgba(72, 187, 120, 0.05) 0%, var(--color-white) 100%);
+.servizio-overview-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-base);
 }
 
-.servizio-overview-card__icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80px;
-    height: 80px;
-    background: var(--color-gray-100);
-    border-radius: var(--radius-lg);
-    margin-bottom: var(--space-lg);
-    color: var(--color-primary);
-    transition: all var(--transition-base);
-}
-
-.servizio-overview-card:hover .servizio-overview-card__icon {
-    background: var(--color-accent);
-    color: var(--color-white);
+.servizio-overview-card:hover .servizio-overview-card__image img {
     transform: scale(1.05);
 }
 
 .servizio-overview-card__badge {
     position: absolute;
-    top: var(--space-md);
-    right: var(--space-md);
+    top: var(--space-sm);
+    right: var(--space-sm);
     background: var(--color-accent);
     color: var(--color-white);
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -4446,57 +4466,82 @@ button {
     background: #48BB78;
 }
 
-.servizio-overview-card__content {
-    flex: 1;
+/* Body section */
+.servizio-overview-card__body {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: var(--space-lg);
+    flex: 1;
+}
+
+.servizio-overview-card__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background: var(--color-gray-100);
+    border-radius: 50%;
+    margin-top: -44px;
+    margin-bottom: var(--space-md);
+    color: var(--color-primary);
+    transition: all var(--transition-base);
+    position: relative;
+    z-index: 1;
+    border: 3px solid var(--color-white);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.servizio-overview-card:hover .servizio-overview-card__icon {
+    background: var(--color-accent);
+    color: var(--color-white);
+    transform: scale(1.1);
+}
+
+.servizio-overview-card__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    width: 100%;
 }
 
 .servizio-overview-card__title {
     font-family: var(--font-heading);
-    font-size: 1.375rem;
+    font-size: 1.125rem;
     font-weight: 700;
     color: var(--color-dark);
-    margin-bottom: var(--space-sm);
+    margin-bottom: var(--space-xs);
 }
 
 .servizio-overview-card__desc {
-    font-size: 0.9375rem;
-    color: var(--color-text);
-    line-height: 1.6;
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    line-height: 1.5;
     margin-bottom: var(--space-md);
-    flex: 1;
 }
 
 .servizio-overview-card__sedi {
     margin-bottom: var(--space-md);
-    padding-top: var(--space-md);
-    border-top: 1px solid var(--color-gray-100);
-}
-
-.servizio-overview-card__sedi-label {
-    display: block;
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--color-text-light);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: var(--space-xs);
+    width: 100%;
 }
 
 .servizio-overview-card__sedi-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px;
+    justify-content: center;
+    gap: 5px;
 }
 
 .servizio-overview-card__sedi-list span {
     display: inline-block;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 500;
     color: var(--color-primary);
     background: rgba(26, 54, 93, 0.08);
-    padding: 4px 10px;
+    padding: 3px 8px;
     border-radius: var(--radius-sm);
 }
 
@@ -4504,10 +4549,11 @@ button {
     display: inline-flex;
     align-items: center;
     gap: var(--space-xs);
-    font-size: 0.9375rem;
+    font-size: 0.875rem;
     font-weight: 600;
     color: var(--color-accent);
     transition: all var(--transition-base);
+    margin-top: auto;
 }
 
 .servizio-overview-card:hover .servizio-overview-card__link {
@@ -4520,4 +4566,23 @@ button {
 
 .servizio-overview-card:hover .servizio-overview-card__link svg {
     transform: translateX(4px);
+}
+
+/* Desktop adjustments */
+@media (min-width: 768px) {
+    .servizio-overview-card__image {
+        height: 160px;
+    }
+
+    .servizio-overview-card__body {
+        padding: var(--space-lg) var(--space-xl);
+    }
+
+    .servizio-overview-card__title {
+        font-size: 1.25rem;
+    }
+
+    .servizio-overview-card__desc {
+        font-size: 0.9rem;
+    }
 }
