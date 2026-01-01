@@ -2817,6 +2817,120 @@ button {
     }
 }
 
+/* ----------------------------------------
+   Mappa Valle d'Aosta SVG
+   ---------------------------------------- */
+.mappa-vda {
+    position: relative;
+    background: linear-gradient(135deg, #0f1419 0%, #1a2332 100%);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+    padding: var(--space-lg);
+}
+
+.mappa-vda__svg {
+    width: 100%;
+    height: auto;
+    min-height: 280px;
+}
+
+.mappa-vda__region {
+    transition: all var(--transition-base);
+}
+
+.mappa-vda__label {
+    fill: #ffffff;
+    font-family: var(--font-heading);
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.mappa-vda__label--main {
+    font-size: 14px;
+}
+
+.mappa-vda__sublabel {
+    fill: #ff6b35;
+    font-family: var(--font-body);
+    font-size: 9px;
+    font-weight: 500;
+}
+
+.mappa-vda__pin {
+    cursor: pointer;
+    transition: transform var(--transition-fast);
+}
+
+.mappa-vda__pin:hover {
+    transform: scale(1.2);
+}
+
+.mappa-vda__pin-link:hover .mappa-vda__label {
+    fill: #ff6b35;
+}
+
+.mappa-vda__pin-pulse {
+    animation: mapPulse 2s ease-in-out infinite;
+}
+
+@keyframes mapPulse {
+    0%, 100% {
+        opacity: 0.3;
+        r: 8;
+    }
+    50% {
+        opacity: 0.1;
+        r: 12;
+    }
+}
+
+.mappa-vda__pin--main .mappa-vda__pin-pulse {
+    animation: mapPulseMain 2s ease-in-out infinite;
+}
+
+@keyframes mapPulseMain {
+    0%, 100% {
+        opacity: 0.2;
+        r: 12;
+    }
+    50% {
+        opacity: 0.05;
+        r: 18;
+    }
+}
+
+.mappa-vda__hint {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.8rem;
+    margin-top: var(--space-sm);
+}
+
+@media (min-width: 768px) {
+    .mappa-vda {
+        padding: var(--space-xl);
+    }
+
+    .mappa-vda__svg {
+        min-height: 400px;
+    }
+
+    .mappa-vda__label {
+        font-size: 12px;
+    }
+
+    .mappa-vda__label--main {
+        font-size: 16px;
+    }
+
+    .mappa-vda__sublabel {
+        font-size: 10px;
+    }
+}
+
 /* Negozi Grid Section */
 .negozi-grid-section {
     padding: var(--space-2xl) 0 var(--space-3xl);
@@ -4124,4 +4238,173 @@ button {
     .sede-altra-card__desc {
         font-size: 0.8125rem;
     }
+}
+
+/* ========================================
+   SERVIZI OVERVIEW PAGE
+   ======================================== */
+
+.servizi-overview {
+    padding: var(--space-2xl) 0 var(--space-3xl);
+    background: var(--color-white);
+}
+
+.servizi-overview .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+}
+
+@media (min-width: 768px) {
+    .servizi-overview .container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-lg);
+    }
+}
+
+@media (min-width: 1024px) {
+    .servizi-overview .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Servizio Overview Card */
+.servizio-overview-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    transition: all var(--transition-base);
+    position: relative;
+}
+
+.servizio-overview-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    border-color: var(--color-accent);
+}
+
+.servizio-overview-card--featured {
+    border-color: var(--color-accent);
+    border-width: 2px;
+    background: linear-gradient(135deg, rgba(237, 137, 54, 0.03) 0%, var(--color-white) 100%);
+}
+
+.servizio-overview-card--summer {
+    background: linear-gradient(135deg, rgba(72, 187, 120, 0.05) 0%, var(--color-white) 100%);
+}
+
+.servizio-overview-card__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: var(--color-gray-100);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-lg);
+    color: var(--color-primary);
+    transition: all var(--transition-base);
+}
+
+.servizio-overview-card:hover .servizio-overview-card__icon {
+    background: var(--color-accent);
+    color: var(--color-white);
+    transform: scale(1.05);
+}
+
+.servizio-overview-card__badge {
+    position: absolute;
+    top: var(--space-md);
+    right: var(--space-md);
+    background: var(--color-accent);
+    color: var(--color-white);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 4px 10px;
+    border-radius: var(--radius-sm);
+}
+
+.servizio-overview-card--summer .servizio-overview-card__badge {
+    background: #48BB78;
+}
+
+.servizio-overview-card__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.servizio-overview-card__title {
+    font-family: var(--font-heading);
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: var(--color-dark);
+    margin-bottom: var(--space-sm);
+}
+
+.servizio-overview-card__desc {
+    font-size: 0.9375rem;
+    color: var(--color-text);
+    line-height: 1.6;
+    margin-bottom: var(--space-md);
+    flex: 1;
+}
+
+.servizio-overview-card__sedi {
+    margin-bottom: var(--space-md);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--color-gray-100);
+}
+
+.servizio-overview-card__sedi-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-xs);
+}
+
+.servizio-overview-card__sedi-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.servizio-overview-card__sedi-list span {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--color-primary);
+    background: rgba(26, 54, 93, 0.08);
+    padding: 4px 10px;
+    border-radius: var(--radius-sm);
+}
+
+.servizio-overview-card__link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    transition: all var(--transition-base);
+}
+
+.servizio-overview-card:hover .servizio-overview-card__link {
+    gap: var(--space-sm);
+}
+
+.servizio-overview-card__link svg {
+    transition: transform var(--transition-base);
+}
+
+.servizio-overview-card:hover .servizio-overview-card__link svg {
+    transform: translateX(4px);
 }
