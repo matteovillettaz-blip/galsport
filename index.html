@@ -30,10 +30,10 @@
             </a>
 
             <nav class="header__nav" id="mainNav">
-                <a href="#chi-siamo">Chi Siamo</a>
+                <a href="chi-siamo.html">Chi Siamo</a>
                 <a href="#servizi">Servizi</a>
                 <a href="#negozi">Negozi</a>
-                <a href="#contatti">Contatti</a>
+                <a href="contatti.html">Contatti</a>
             </nav>
 
             <div class="header__lang">
@@ -43,10 +43,10 @@
 
         <!-- Mobile Menu -->
         <nav class="mobile-nav" id="mobileNav">
-            <a href="#chi-siamo">Chi Siamo</a>
+            <a href="chi-siamo.html">Chi Siamo</a>
             <a href="#servizi">Servizi</a>
             <a href="#negozi">Negozi</a>
-            <a href="#contatti">Contatti</a>
+            <a href="contatti.html">Contatti</a>
         </nav>
     </header>
 
@@ -165,7 +165,7 @@
                 <p class="chi-siamo__text">
                     Oggi con <strong>6 negozi</strong> siamo sempre vicini alle tue piste preferite: da Pila a Cervinia, da Cogne a Crevacol.
                 </p>
-                <a href="/chi-siamo" class="chi-siamo__cta">
+                <a href="chi-siamo.html" class="chi-siamo__cta">
                     <span>Scopri la nostra storia</span>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -490,6 +490,13 @@
         </div>
     </footer>
 
+    <!-- Scroll to Top Button (Mobile) -->
+    <button class="scroll-top" id="scrollTop" aria-label="Torna su">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+    </button>
+
     <!-- JavaScript -->
     <script>
         // Header scroll effect
@@ -568,6 +575,21 @@
                     </svg>
                 `;
             }
+        });
+
+        // Scroll to top button
+        const scrollTopBtn = document.getElementById('scrollTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
 
