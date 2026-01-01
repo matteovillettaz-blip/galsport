@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gal Sport - Dal 1988, 6 negozi in Valle d'Aosta</title>
+    <meta name="description" content="Noleggio sci, snowboard, e-bike e vendita articoli sportivi in Valle d'Aosta. 6 negozi: Aosta, Pollein, Pila, Cervinia, Cogne, Crevacol.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header__container">
+            <button class="header__menu-toggle" aria-label="Menu" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <a href="/" class="header__logo">
+                GALSPORT
+            </a>
+
+            <nav class="header__nav" id="mainNav">
+                <a href="#chi-siamo">Chi Siamo</a>
+                <a href="#servizi">Servizi</a>
+                <a href="#negozi">Negozi</a>
+                <a href="#contatti">Contatti</a>
+            </nav>
+
+            <div class="header__lang">
+                <span class="header__lang-current">IT</span>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <nav class="mobile-nav" id="mobileNav">
+            <a href="#chi-siamo">Chi Siamo</a>
+            <a href="#servizi">Servizi</a>
+            <a href="#negozi">Negozi</a>
+            <a href="#contatti">Contatti</a>
+        </nav>
+    </header>
+
+    <!-- Hero Toggle Button -->
+    <button class="hero-toggle" id="heroToggle" aria-label="Cambia stile hero">
+        <span class="hero-toggle__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="7" height="7"/>
+                <rect x="14" y="3" width="7" height="7"/>
+                <rect x="14" y="14" width="7" height="7"/>
+                <rect x="3" y="14" width="7" height="7"/>
+            </svg>
+        </span>
+        <span class="hero-toggle__label">Multi</span>
+    </button>
+
+    <!-- Hero Section - Single Image Version -->
+    <section class="hero hero--single" id="heroSingle" style="display: none;">
+        <div class="hero__background">
+            <img src="https://images.unsplash.com/photo-1551524559-8af4e6624178?w=1920&q=80"
+                 alt="Sciatore sulle Alpi"
+                 class="hero__image">
+        </div>
+        <div class="hero__content">
+            <p class="hero__subtitle">Dal 1988</p>
+            <h1 class="hero__title">Il tuo sport<br>inizia qui</h1>
+            <p class="hero__description">6 negozi in Valle d'Aosta per noleggio e vendita di attrezzatura sportiva</p>
+            <a href="#negozi" class="hero__cta">
+                <span>Trova negozio</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+        <div class="hero__scroll">
+            <span>Scorri</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14M5 12l7 7 7-7"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Hero Section - Multi Column Version -->
+    <section class="hero hero--multi" id="heroMulti">
+        <div class="hero__background hero__background--multi">
+            <div class="hero__column">
+                <img src="https://images.unsplash.com/photo-1565992441121-4367c2967103?w=600&q=80"
+                     alt="Sci alpino"
+                     class="hero__image">
+                <span class="hero__column-label">Sci</span>
+            </div>
+            <div class="hero__column">
+                <img src="https://images.unsplash.com/photo-1544191696-102dbdaeeaa0?w=600&q=80"
+                     alt="Mountain Bike"
+                     class="hero__image">
+                <span class="hero__column-label">Bike</span>
+            </div>
+            <div class="hero__column">
+                <img src="https://images.unsplash.com/photo-1478700485868-972b69dc3fc4?w=600&q=80"
+                     alt="Snowboard"
+                     class="hero__image">
+                <span class="hero__column-label">Snow</span>
+            </div>
+            <div class="hero__column">
+                <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=600&q=80"
+                     alt="Trekking in montagna"
+                     class="hero__image">
+                <span class="hero__column-label">Trekking</span>
+            </div>
+        </div>
+        <div class="hero__content">
+            <p class="hero__subtitle">Dal 1988</p>
+            <h1 class="hero__title">Il tuo sport<br>inizia qui</h1>
+            <p class="hero__description">6 negozi in Valle d'Aosta per noleggio e vendita di attrezzatura sportiva</p>
+            <a href="#negozi" class="hero__cta">
+                <span>Trova negozio</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+        <div class="hero__scroll">
+            <span>Scorri</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14M5 12l7 7 7-7"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Chi Siamo Section -->
+    <section class="chi-siamo" id="chi-siamo">
+        <div class="chi-siamo__wrapper">
+            <div class="chi-siamo__visual">
+                <div class="chi-siamo__image-container">
+                    <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=800&q=80"
+                         alt="Sciatori in Valle d'Aosta"
+                         class="chi-siamo__img">
+                </div>
+                <div class="chi-siamo__stats">
+                    <div class="chi-siamo__stat">
+                        <span class="chi-siamo__stat-number">35+</span>
+                        <span class="chi-siamo__stat-label">Anni di esperienza</span>
+                    </div>
+                    <div class="chi-siamo__stat">
+                        <span class="chi-siamo__stat-number">6</span>
+                        <span class="chi-siamo__stat-label">Negozi in VdA</span>
+                    </div>
+                </div>
+            </div>
+            <div class="chi-siamo__content">
+                <span class="chi-siamo__label">Chi Siamo</span>
+                <h2 class="chi-siamo__title">La passione per la montagna,<br>dal 1988</h2>
+                <p class="chi-siamo__text">
+                    Siamo nati ad Aosta quando la Valle d'Aosta stava diventando una delle mete sciistiche più amate d'Europa. Da allora, abbiamo accompagnato generazioni di sportivi nelle loro avventure.
+                </p>
+                <p class="chi-siamo__text">
+                    Oggi con <strong>6 negozi</strong> siamo sempre vicini alle tue piste preferite: da Pila a Cervinia, da Cogne a Crevacol.
+                </p>
+                <a href="/chi-siamo" class="chi-siamo__cta">
+                    <span>Scopri la nostra storia</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servizi Section -->
+    <section class="servizi" id="servizi">
+        <div class="container">
+            <h2 class="section-title">Cosa facciamo</h2>
+
+            <div class="servizi__grid">
+
+                <!-- Servizio 1: Noleggio Sci -->
+                <div class="servizio-card">
+                    <div class="servizio-card__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="4" r="2"/>
+                            <path d="M12 6v4"/>
+                            <path d="M9 14l-5 6"/>
+                            <path d="M15 14l5 6"/>
+                            <path d="M12 10l-3 4h6l-3-4"/>
+                            <path d="M4 20h2M18 20h2"/>
+                        </svg>
+                    </div>
+                    <h3 class="servizio-card__title">Noleggio Sci<br>& Snowboard</h3>
+                    <div class="servizio-card__divider"></div>
+                    <p class="servizio-card__desc">Attrezzatura top per ogni livello, dai principianti agli esperti. Scarponi, bastoncini e caschi inclusi.</p>
+                    <a href="/servizi/noleggio-sci" class="servizio-card__link">
+                        Scopri
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Servizio 2: Noleggio E-Bike -->
+                <div class="servizio-card">
+                    <div class="servizio-card__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="5" cy="17" r="3"/>
+                            <circle cx="19" cy="17" r="3"/>
+                            <path d="M12 17V6l4 4"/>
+                            <path d="M5 17l5-7h3"/>
+                            <path d="M19 17l-5-7"/>
+                            <circle cx="9" cy="4" r="1"/>
+                        </svg>
+                    </div>
+                    <h3 class="servizio-card__title">Noleggio<br>E-Bike</h3>
+                    <div class="servizio-card__divider"></div>
+                    <p class="servizio-card__desc">Esplora la Valle d'Aosta su due ruote. E-bike e MTB per escursioni indimenticabili.</p>
+                    <a href="/servizi/noleggio-ebike" class="servizio-card__link">
+                        Scopri
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Servizio 3: Laboratorio -->
+                <div class="servizio-card">
+                    <div class="servizio-card__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                    </div>
+                    <h3 class="servizio-card__title">Laboratorio<br>& Officina</h3>
+                    <div class="servizio-card__divider"></div>
+                    <p class="servizio-card__desc">Manutenzione professionale per sci e bici. Sciolinatura, lamine e riparazioni veloci.</p>
+                    <a href="/servizi/laboratorio" class="servizio-card__link">
+                        Scopri
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Negozi Section -->
+    <section class="negozi" id="negozi">
+        <div class="container">
+            <h2 class="section-title">6 negozi, 1 passione</h2>
+            <p class="section-subtitle">Siamo sempre vicini alle tue piste preferite</p>
+
+            <!-- Mappa placeholder con immagine -->
+            <div class="negozi__mappa">
+                <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1200&q=80"
+                     alt="Vista delle Alpi Valle d'Aosta"
+                     class="negozi__mappa-image">
+                <div class="negozi__mappa-overlay">
+                    <div class="negozi__mappa-content">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        <p>6 punti vendita in Valle d'Aosta</p>
+                        <span>Da Aosta a Cervinia, sempre al tuo fianco</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cards negozi -->
+            <div class="negozi__grid">
+
+                <a href="/negozi/aosta" class="negozio-card">
+                    <div class="negozio-card__header">
+                        <span class="negozio-card__badge">Sede principale</span>
+                    </div>
+                    <h3 class="negozio-card__name">Aosta</h3>
+                    <p class="negozio-card__address">Via Paravera 6/A</p>
+                    <p class="negozio-card__phone">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                        </svg>
+                        0165 236134
+                    </p>
+                    <span class="negozio-card__arrow">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </span>
+                </a>
+
+                <a href="/negozi/pollein" class="negozio-card">
+                    <div class="negozio-card__header">
+                        <span class="negozio-card__badge">Showroom 1000mq</span>
+                    </div>
+                    <h3 class="negozio-card__name">Pollein</h3>
+                    <p class="negozio-card__address">Loc. Autoporto 33/E</p>
+                    <p class="negozio-card__phone">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                        </svg>
+                        0165 263933
+                    </p>
+                    <span class="negozio-card__arrow">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </span>
+                </a>
+
+                <a href="/negozi/pila" class="negozio-card">
+                    <h3 class="negozio-card__name">Pila</h3>
+                    <p class="negozio-card__address">Cond. Bouton d'Or</p>
+                    <p class="negozio-card__phone">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                        </svg>
+                        0165 252978
+                    </p>
+                    <span class="negozio-card__arrow">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </span>
+                </a>
+
+                <a href="/negozi/cervinia" class="negozio-card">
+                    <h3 class="negozio-card__name">Cervinia</h3>
+                    <p class="negozio-card__address">Loc. Plan de la Glaea</p>
+                    <p class="negozio-card__phone">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                        </svg>
+                        0166 92308
+                    </p>
+                    <span class="negozio-card__arrow">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </span>
+                </a>
+
+                <a href="/negozi/cogne" class="negozio-card">
+                    <h3 class="negozio-card__name">Cogne</h3>
+                    <p class="negozio-card__address">Via Grappein 6</p>
+                    <p class="negozio-card__phone">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                        </svg>
+                        0165 236134
+                    </p>
+                    <span class="negozio-card__arrow">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </span>
+                </a>
+
+                <a href="/negozi/crevacol" class="negozio-card">
+                    <div class="negozio-card__header">
+                        <span class="negozio-card__badge negozio-card__badge--seasonal">Stagionale</span>
+                    </div>
+                    <h3 class="negozio-card__name">Crevacol</h3>
+                    <p class="negozio-card__address">Loc. La Rosière</p>
+                    <p class="negozio-card__phone">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                        </svg>
+                        0165 780844
+                    </p>
+                    <span class="negozio-card__arrow">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Section -->
+    <section class="brand" id="brand">
+        <div class="container">
+            <h2 class="section-title section-title--small">I brand che trattiamo</h2>
+            <div class="brand__grid">
+                <div class="brand__item brand__item--rossignol">
+                    <span class="brand__name">ROSSIGNOL</span>
+                </div>
+                <div class="brand__item brand__item--salomon">
+                    <span class="brand__name">SALOMON</span>
+                </div>
+                <div class="brand__item brand__item--head">
+                    <span class="brand__name">HEAD</span>
+                </div>
+                <div class="brand__item brand__item--atomic">
+                    <span class="brand__name">ATOMIC</span>
+                </div>
+                <div class="brand__item brand__item--nordica">
+                    <span class="brand__name">NORDICA</span>
+                </div>
+                <div class="brand__item brand__item--burton">
+                    <span class="brand__name">BURTON</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contatti">
+        <div class="footer__background">
+            <img src="https://images.unsplash.com/photo-1483921020237-2ff51e8e4b22?w=1920&q=80"
+                 alt="Montagne innevate"
+                 class="footer__bg-image">
+        </div>
+        <div class="footer__content">
+            <div class="container">
+                <div class="footer__main">
+                    <div class="footer__brand">
+                        <span class="footer__logo">GALSPORT</span>
+                        <p class="footer__tagline">Dal 1988, il tuo partner per lo sport in Valle d'Aosta</p>
+                    </div>
+                </div>
+
+                <div class="footer__grid">
+
+                    <div class="footer__col">
+                        <h3 class="footer__title">Contattaci</h3>
+                        <p class="footer__contact">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                            </svg>
+                            0165 236134
+                        </p>
+                        <p class="footer__contact">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <path d="M22 6l-10 7L2 6"/>
+                            </svg>
+                            info@galsport.com
+                        </p>
+                    </div>
+
+                    <div class="footer__col">
+                        <h3 class="footer__title">Sedi</h3>
+                        <div class="footer__links">
+                            <a href="/negozi/aosta">Aosta</a>
+                            <a href="/negozi/pollein">Pollein</a>
+                            <a href="/negozi/pila">Pila</a>
+                            <a href="/negozi/cervinia">Cervinia</a>
+                            <a href="/negozi/cogne">Cogne</a>
+                            <a href="/negozi/crevacol">Crevacol</a>
+                        </div>
+                    </div>
+
+                    <div class="footer__col">
+                        <h3 class="footer__title">Seguici</h3>
+                        <div class="footer__social">
+                            <a href="#" class="footer__social-link" aria-label="Facebook">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="footer__social-link" aria-label="Instagram">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                    <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="footer__bottom">
+                    <p>&copy; 2026 Gal Sport. Tutti i diritti riservati.</p>
+                    <div class="footer__legal">
+                        <a href="/privacy">Privacy Policy</a>
+                        <a href="/cookie">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('header--scrolled');
+            } else {
+                header.classList.remove('header--scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileNav = document.getElementById('mobileNav');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+        });
+
+        // Close mobile menu on link click
+        const mobileLinks = mobileNav.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                mobileNav.classList.remove('active');
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Hero toggle functionality
+        const heroToggle = document.getElementById('heroToggle');
+        const heroSingle = document.getElementById('heroSingle');
+        const heroMulti = document.getElementById('heroMulti');
+        const toggleLabel = heroToggle.querySelector('.hero-toggle__label');
+        const toggleIcon = heroToggle.querySelector('.hero-toggle__icon');
+
+        let isMulti = true; // Start with multi-column view
+
+        heroToggle.addEventListener('click', () => {
+            isMulti = !isMulti;
+
+            if (isMulti) {
+                heroMulti.style.display = 'flex';
+                heroSingle.style.display = 'none';
+                toggleLabel.textContent = 'Multi';
+                toggleIcon.innerHTML = `
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7"/>
+                        <rect x="14" y="3" width="7" height="7"/>
+                        <rect x="14" y="14" width="7" height="7"/>
+                        <rect x="3" y="14" width="7" height="7"/>
+                    </svg>
+                `;
+            } else {
+                heroMulti.style.display = 'none';
+                heroSingle.style.display = 'flex';
+                toggleLabel.textContent = 'Single';
+                toggleIcon.innerHTML = `
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="18" height="18" rx="2"/>
+                    </svg>
+                `;
+            }
+        });
+    </script>
+
+</body>
+</html>
