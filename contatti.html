@@ -66,13 +66,13 @@
                 <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
             </svg>
         </span>
-        <span class="page-toggle__label">Sedi</span>
+        <span class="page-toggle__label">Form</span>
     </button>
 
     <!-- ================================ -->
     <!-- VERSION A: FORM-CENTRIC          -->
     <!-- ================================ -->
-    <main class="page-content page-content--form" id="versionForm" style="display: none;">
+    <main class="page-content page-content--form" id="versionForm">
 
         <!-- Hero Interno -->
         <section class="hero-internal hero-internal--small">
@@ -222,7 +222,7 @@
     <!-- ================================ -->
     <!-- VERSION B: MULTI-LOCATION        -->
     <!-- ================================ -->
-    <main class="page-content page-content--locations" id="versionLocations">
+    <main class="page-content page-content--locations" id="versionLocations" style="display: none;">
 
         <!-- Hero Interno -->
         <section class="hero-internal hero-internal--small">
@@ -598,19 +598,19 @@
         const versionLocations = document.getElementById('versionLocations');
         const toggleLabel = pageToggle.querySelector('.page-toggle__label');
 
-        let isLocations = true; // Start with locations view (user's preference)
+        let isForm = true; // Start with form view
 
         pageToggle.addEventListener('click', () => {
-            isLocations = !isLocations;
+            isForm = !isForm;
 
-            if (isLocations) {
-                versionLocations.style.display = 'block';
-                versionForm.style.display = 'none';
-                toggleLabel.textContent = 'Sedi';
-            } else {
-                versionLocations.style.display = 'none';
+            if (isForm) {
                 versionForm.style.display = 'block';
+                versionLocations.style.display = 'none';
                 toggleLabel.textContent = 'Form';
+            } else {
+                versionForm.style.display = 'none';
+                versionLocations.style.display = 'block';
+                toggleLabel.textContent = 'Sedi';
             }
 
             // Scroll to top when switching
