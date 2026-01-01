@@ -244,9 +244,29 @@ button {
 }
 
 .header__lang {
+    display: flex;
+    align-items: center;
+    gap: 6px;
     font-size: 0.875rem;
     font-weight: 500;
     color: var(--color-white);
+}
+
+.header__lang-current {
+    opacity: 1;
+}
+
+.header__lang-separator {
+    opacity: 0.5;
+}
+
+.header__lang-link {
+    opacity: 0.7;
+    transition: opacity var(--transition-fast);
+}
+
+.header__lang-link:hover {
+    opacity: 1;
 }
 
 .header--scrolled .header__lang {
@@ -1644,7 +1664,7 @@ button {
     background-color: var(--color-dark);
 }
 
-.header--internal .header__lang-current {
+.header--internal .header__lang {
     color: var(--color-text);
 }
 
@@ -4591,6 +4611,32 @@ button {
     text-align: center;
     font-weight: 600;
     margin-top: var(--space-sm);
+}
+
+/* Mobile Nav Language Switcher */
+.mobile-nav__lang {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+    padding-top: var(--space-lg);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav__lang span,
+.mobile-nav__lang a {
+    font-size: 0.875rem;
+    color: var(--color-white);
+    opacity: 0.7;
+}
+
+.mobile-nav__lang span {
+    opacity: 1;
+    font-weight: 600;
+}
+
+.mobile-nav__lang a:hover {
+    opacity: 1;
 }
 
 /* Shop CTA Section */
