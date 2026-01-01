@@ -3385,3 +3385,743 @@ button {
         font-size: 2.5rem;
     }
 }
+
+/* ========================================
+   SEDE PAGE (Single Store)
+   ======================================== */
+
+/* ----------------------------------------
+   Sede Hero
+   ---------------------------------------- */
+.sede-hero {
+    position: relative;
+    height: 60vh;
+    min-height: 400px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.sede-hero__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.sede-hero__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sede-hero__background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.7) 0%,
+        rgba(0, 0, 0, 0.3) 50%,
+        rgba(0, 0, 0, 0.1) 100%
+    );
+}
+
+.sede-hero__content {
+    text-align: center;
+    color: var(--color-white);
+    padding: var(--space-2xl) var(--space-lg);
+}
+
+.sede-hero__badge {
+    display: inline-block;
+    background: var(--color-accent);
+    color: var(--color-white);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 6px 16px;
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--space-sm);
+}
+
+.sede-hero__title {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: var(--space-xs);
+}
+
+.sede-hero__subtitle {
+    font-size: 1.125rem;
+    opacity: 0.9;
+}
+
+@media (min-width: 768px) {
+    .sede-hero {
+        height: 70vh;
+    }
+
+    .sede-hero__title {
+        font-size: 4.5rem;
+    }
+
+    .sede-hero__subtitle {
+        font-size: 1.25rem;
+    }
+}
+
+/* ----------------------------------------
+   Sede Info Bar
+   ---------------------------------------- */
+.sede-info-bar {
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: var(--space-md) 0;
+}
+
+.sede-info-bar__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md) var(--space-lg);
+}
+
+.sede-info-bar__item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: 0.9375rem;
+}
+
+.sede-info-bar__item svg {
+    flex-shrink: 0;
+    opacity: 0.8;
+}
+
+.sede-info-bar__item a {
+    color: var(--color-white);
+    font-weight: 500;
+}
+
+.sede-info-bar__item a:hover {
+    text-decoration: underline;
+}
+
+.sede-info-bar__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    background: var(--color-accent);
+    color: var(--color-white);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 0.875rem;
+    transition: all var(--transition-base);
+}
+
+.sede-info-bar__cta:hover {
+    background: var(--color-accent-hover);
+    transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+    .sede-info-bar__wrapper {
+        justify-content: space-between;
+    }
+}
+
+/* ----------------------------------------
+   Sede About
+   ---------------------------------------- */
+.sede-about {
+    padding: var(--space-3xl) 0;
+    background: var(--color-white);
+}
+
+.sede-about__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+}
+
+.sede-about__content {
+    order: 2;
+}
+
+.sede-about__label {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: var(--space-md);
+}
+
+.sede-about__label::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--color-accent);
+}
+
+.sede-about__title {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-dark);
+    line-height: 1.2;
+    margin-bottom: var(--space-md);
+}
+
+.sede-about__text {
+    font-size: 1rem;
+    color: var(--color-text);
+    line-height: 1.7;
+    margin-bottom: var(--space-md);
+}
+
+.sede-about__image {
+    order: 1;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.sede-about__image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+@media (min-width: 768px) {
+    .sede-about__wrapper {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-2xl);
+        align-items: center;
+    }
+
+    .sede-about__content {
+        order: 1;
+    }
+
+    .sede-about__image {
+        order: 2;
+    }
+
+    .sede-about__image img {
+        height: 450px;
+    }
+
+    .sede-about__title {
+        font-size: 2.5rem;
+    }
+}
+
+/* Sede Features */
+.sede-features {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.sede-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+}
+
+.sede-feature__icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-gray-100);
+    border-radius: var(--radius-md);
+    color: var(--color-accent);
+}
+
+.sede-feature__text strong {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-dark);
+    margin-bottom: 2px;
+}
+
+.sede-feature__text span {
+    font-size: 0.875rem;
+    color: var(--color-text-light);
+}
+
+/* ----------------------------------------
+   Sede Servizi
+   ---------------------------------------- */
+.sede-servizi {
+    padding: var(--space-3xl) 0;
+    background: var(--color-gray-50);
+}
+
+.sede-servizi__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+}
+
+.sede-servizio-card {
+    display: block;
+    background: var(--color-white);
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    border: 1px solid var(--color-gray-200);
+    transition: all var(--transition-base);
+    position: relative;
+}
+
+.sede-servizio-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-color: var(--color-accent);
+}
+
+.sede-servizio-card--featured {
+    border-color: var(--color-accent);
+    border-width: 2px;
+}
+
+.sede-servizio-card__badge {
+    position: absolute;
+    top: var(--space-sm);
+    right: var(--space-sm);
+    background: var(--color-accent);
+    color: var(--color-white);
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: var(--radius-sm);
+}
+
+.sede-servizio-card__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background: var(--color-gray-100);
+    border-radius: var(--radius-full);
+    margin-bottom: var(--space-md);
+    color: var(--color-primary);
+    transition: all var(--transition-base);
+}
+
+.sede-servizio-card:hover .sede-servizio-card__icon {
+    background: var(--color-accent);
+    color: var(--color-white);
+}
+
+.sede-servizio-card__title {
+    font-family: var(--font-heading);
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-dark);
+    margin-bottom: var(--space-xs);
+}
+
+.sede-servizio-card__desc {
+    font-size: 0.8125rem;
+    color: var(--color-text-light);
+    line-height: 1.5;
+    margin-bottom: var(--space-sm);
+}
+
+.sede-servizio-card__link {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--color-accent);
+}
+
+@media (min-width: 768px) {
+    .sede-servizi__grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-lg);
+    }
+
+    .sede-servizio-card {
+        padding: var(--space-xl);
+    }
+
+    .sede-servizio-card__title {
+        font-size: 1.25rem;
+    }
+
+    .sede-servizio-card__desc {
+        font-size: 0.875rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .sede-servizi__grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+/* ----------------------------------------
+   Sede Gallery
+   ---------------------------------------- */
+.sede-gallery {
+    padding: var(--space-3xl) 0;
+    background: var(--color-white);
+}
+
+.sede-gallery__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+}
+
+.sede-gallery__item {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    aspect-ratio: 4/3;
+}
+
+.sede-gallery__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.sede-gallery__item:hover img {
+    transform: scale(1.05);
+}
+
+.sede-gallery__item--large {
+    grid-column: 1 / -1;
+    aspect-ratio: 16/9;
+}
+
+@media (min-width: 768px) {
+    .sede-gallery__grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--space-md);
+    }
+
+    .sede-gallery__item--large {
+        grid-column: 1 / 3;
+        grid-row: 1 / 3;
+        aspect-ratio: auto;
+    }
+}
+
+/* ----------------------------------------
+   Sede Orari
+   ---------------------------------------- */
+.sede-orari {
+    padding: var(--space-2xl) 0;
+    background: var(--color-gray-50);
+}
+
+.sede-orari__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+    align-items: center;
+}
+
+.sede-orari__title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-dark);
+    margin-bottom: var(--space-xs);
+}
+
+.sede-orari__note {
+    font-size: 0.875rem;
+    color: var(--color-text-light);
+    margin-bottom: var(--space-md);
+}
+
+.sede-orari__table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: var(--space-md);
+}
+
+.sede-orari__table tr {
+    border-bottom: 1px solid var(--color-gray-200);
+}
+
+.sede-orari__table td {
+    padding: var(--space-sm) 0;
+    font-size: 0.9375rem;
+}
+
+.sede-orari__table td:first-child {
+    font-weight: 600;
+    color: var(--color-dark);
+}
+
+.sede-orari__table td:last-child {
+    text-align: right;
+    color: var(--color-text);
+}
+
+.sede-orari__stagione {
+    font-size: 0.875rem;
+    color: var(--color-primary);
+    background: var(--color-white);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-md);
+    border-left: 3px solid var(--color-accent);
+}
+
+.sede-orari__cta {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    padding: var(--space-md) var(--space-xl);
+    border-radius: var(--radius-md);
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    transition: all var(--transition-base);
+}
+
+.btn--primary {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn--primary:hover {
+    background: var(--color-primary-light);
+    transform: translateY(-2px);
+}
+
+.btn--secondary {
+    background: #25D366;
+    color: var(--color-white);
+}
+
+.btn--secondary:hover {
+    background: #128C7E;
+    transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+    .sede-orari__wrapper {
+        grid-template-columns: 1fr auto;
+    }
+
+    .sede-orari__cta {
+        flex-direction: row;
+    }
+}
+
+/* ----------------------------------------
+   Sede Mappa
+   ---------------------------------------- */
+.sede-mappa {
+    position: relative;
+}
+
+.sede-mappa__map {
+    position: relative;
+    height: 350px;
+}
+
+.sede-mappa__placeholder {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(30%);
+}
+
+.sede-mappa__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 54, 93, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+}
+
+.sede-mappa__pin {
+    width: 64px;
+    height: 64px;
+    background: var(--color-accent);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    animation: bounce 2s infinite;
+}
+
+.sede-mappa__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    background: var(--color-white);
+    color: var(--color-primary);
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    transition: all var(--transition-base);
+}
+
+.sede-mappa__cta:hover {
+    background: var(--color-accent);
+    color: var(--color-white);
+    transform: translateY(-2px);
+}
+
+.sede-mappa__info {
+    padding: var(--space-xl) 0;
+    background: var(--color-gray-50);
+}
+
+.sede-mappa__directions h3 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-dark);
+    margin-bottom: var(--space-md);
+}
+
+.sede-mappa__directions p {
+    font-size: 0.9375rem;
+    color: var(--color-text);
+    margin-bottom: var(--space-sm);
+    line-height: 1.6;
+}
+
+.sede-mappa__directions strong {
+    color: var(--color-primary);
+}
+
+@media (min-width: 768px) {
+    .sede-mappa__map {
+        height: 450px;
+    }
+}
+
+/* ----------------------------------------
+   Sede Altre (Nearby Stores)
+   ---------------------------------------- */
+.sede-altre {
+    padding: var(--space-3xl) 0;
+    background: var(--color-white);
+}
+
+.sede-altre__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.sede-altra-card {
+    display: flex;
+    background: var(--color-gray-50);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all var(--transition-base);
+}
+
+.sede-altra-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.sede-altra-card__image {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+}
+
+.sede-altra-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sede-altra-card__content {
+    flex: 1;
+    padding: var(--space-sm) var(--space-md);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sede-altra-card__distance {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.sede-altra-card__name {
+    font-family: var(--font-heading);
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-dark);
+}
+
+.sede-altra-card__desc {
+    font-size: 0.75rem;
+    color: var(--color-text-light);
+}
+
+@media (min-width: 768px) {
+    .sede-altra-card__image {
+        width: 120px;
+        height: 100px;
+    }
+
+    .sede-altra-card__content {
+        padding: var(--space-md) var(--space-lg);
+    }
+
+    .sede-altra-card__name {
+        font-size: 1.25rem;
+    }
+
+    .sede-altra-card__desc {
+        font-size: 0.8125rem;
+    }
+}
