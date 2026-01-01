@@ -4414,7 +4414,7 @@ button {
     }
 }
 
-/* Servizio Overview Card - New Layout with Images */
+/* Servizio Overview Card - Image Only Layout */
 .servizio-overview-card {
     display: flex;
     flex-direction: column;
@@ -4433,7 +4433,7 @@ button {
 /* Image section */
 .servizio-overview-card__image {
     position: relative;
-    height: 140px;
+    height: 160px;
     overflow: hidden;
 }
 
@@ -4445,7 +4445,7 @@ button {
 }
 
 .servizio-overview-card:hover .servizio-overview-card__image img {
-    transform: scale(1.05);
+    transform: scale(1.08);
 }
 
 .servizio-overview-card__badge {
@@ -4458,7 +4458,7 @@ button {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    padding: 4px 10px;
+    padding: 5px 12px;
     border-radius: var(--radius-sm);
 }
 
@@ -4466,46 +4466,16 @@ button {
     background: #48BB78;
 }
 
-/* Body section */
-.servizio-overview-card__body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: var(--space-lg);
-    flex: 1;
+.servizio-overview-card--featured .servizio-overview-card__badge {
+    background: var(--color-primary);
 }
 
-.servizio-overview-card__icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 56px;
-    height: 56px;
-    background: var(--color-gray-100);
-    border-radius: 50%;
-    margin-top: -44px;
-    margin-bottom: var(--space-md);
-    color: var(--color-primary);
-    transition: all var(--transition-base);
-    position: relative;
-    z-index: 1;
-    border: 3px solid var(--color-white);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.servizio-overview-card:hover .servizio-overview-card__icon {
-    background: var(--color-accent);
-    color: var(--color-white);
-    transform: scale(1.1);
-}
-
+/* Content section */
 .servizio-overview-card__content {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    padding: var(--space-lg);
     flex: 1;
-    width: 100%;
 }
 
 .servizio-overview-card__title {
@@ -4517,22 +4487,21 @@ button {
 }
 
 .servizio-overview-card__desc {
-    font-size: 0.85rem;
+    font-size: 0.875rem;
     color: var(--color-text-light);
     line-height: 1.5;
     margin-bottom: var(--space-md);
+    flex: 1;
 }
 
 .servizio-overview-card__sedi {
     margin-bottom: var(--space-md);
-    width: 100%;
 }
 
 .servizio-overview-card__sedi-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 5px;
+    gap: 6px;
 }
 
 .servizio-overview-card__sedi-list span {
@@ -4541,7 +4510,7 @@ button {
     font-weight: 500;
     color: var(--color-primary);
     background: rgba(26, 54, 93, 0.08);
-    padding: 3px 8px;
+    padding: 4px 10px;
     border-radius: var(--radius-sm);
 }
 
@@ -4571,10 +4540,10 @@ button {
 /* Desktop adjustments */
 @media (min-width: 768px) {
     .servizio-overview-card__image {
-        height: 160px;
+        height: 180px;
     }
 
-    .servizio-overview-card__body {
+    .servizio-overview-card__content {
         padding: var(--space-lg) var(--space-xl);
     }
 
